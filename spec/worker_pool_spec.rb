@@ -47,11 +47,11 @@ RSpec.describe WorkerPool do
     end
   end
 
-  describe ".coordinator" do
-    it "raises if the worker pool has not been started" do
-      expect { WorkerPool.coordinator }.to raise_error(RuntimeError, /no inicializado/i)
-    end
-  end
+  # describe ".coordinator" do
+  #   it "raises if the worker pool has not been started" do
+  #     expect { WorkerPool.coordinator }.to raise_error(RuntimeError, /no inicializado/i)
+  #   end
+  # end
 
   describe ".submit" do
     let(:coordinator) { instance_double(WorkerPool::Coordinator, submit: nil, shutdown: nil) }

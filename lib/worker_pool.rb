@@ -15,6 +15,11 @@ require "thread"
 require "securerandom"
 require "time"
 
+begin
+  require "worker_pool/railtie"
+rescue LoadError
+end
+
 module WorkerPool
 
   class << self

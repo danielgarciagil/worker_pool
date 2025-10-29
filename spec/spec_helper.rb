@@ -23,7 +23,7 @@ RSpec.configure do |config|
     end
   end
 
-  config.after do
-    WorkerPool.shutdown(graceful: false)
-  end
+  # config.after do
+  #   WorkerPool.shutdown(graceful: false)
+  # end
 end

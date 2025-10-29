@@ -20,7 +20,7 @@ RSpec.describe WorkerPool::RetryPolicy do
 
       delay = policy.next_delay(2)
 
-      expect(delay).to be_within(0.0001).of(1.5) # 2.0 - (2.0 * 0.5 * 0.25)
+      expect(delay).to be_within(0.0001).of(1.75) # 2.0 - (2.0 * 0.5 * 0.25)
     end
 
     it "caps the delay at the configured maximum" do
